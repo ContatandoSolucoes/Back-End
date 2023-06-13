@@ -13,7 +13,7 @@ router.get('/', async(req,res)=>{
             res.status(200).json(results)
         }
     }catch(err){
-        response.status(500).json({message: `encontramos um erro: ${err}`});
+        res.status(500).json({message: `encontramos um erro: ${err}`});
     }
 });
 

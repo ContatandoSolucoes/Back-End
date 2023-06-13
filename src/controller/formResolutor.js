@@ -15,7 +15,7 @@ router.post('/', async (resquest, response) => {
         }
         if(resposta.length > 0){
             const results = resposta[0]
-
+            
             response.status(200).json({mensagem: "ID valido", denuncia: `${results}`})
     }
     else{

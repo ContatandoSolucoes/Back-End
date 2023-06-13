@@ -12,21 +12,21 @@ import formsResolutor from './controller/formResolutor.js'
 
 const router = express()
 
-router.use('/user', user)
+router.use('/user', user);
 
-router.use('/login', userl)
+router.use('/login', userl);
 
-router.use('/reset', email)
+router.use('/reset', email);
 
-router.use('/photo', camera)
+router.use('/photo', camera);
 
-router.use('/denuncia', denuncia)
+router.use('/denuncia', denuncia);
 
-router.use('/update', update)
+router.use('/update', update);
 
-router.use('/imgView', imgView )
+router.use('/imgView', imgView ); // oq é? ñ funciona
 
-router.use('/getD', getD )
+router.use('/getD', getD );
 
 router.use('/resolutor', formsResolutor)
 
