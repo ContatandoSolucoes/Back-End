@@ -32,8 +32,6 @@ router.get('/', async (resquest, response) => {
     try{
         const results = await db.denuncia() 
 
-        
-
         if(results.length == 0){
             response.status(204).end();
         } else{

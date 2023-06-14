@@ -56,7 +56,8 @@ router.post('/', async (request, response) => {
                       <li>Tipo de problema: ${tipo_problema}</li>
                       <li>Descrição: ${desc_problema}</li>
                       <li>Endereço: ${loc}</li>
-                    </ul>` 
+                    </ul>
+                    <img src='${url}'></img>` 
                 })
     
                 .then(() => console.log("E-mail elétrico enviado com sucesso."))
@@ -75,7 +76,8 @@ router.post('/', async (request, response) => {
                       <li>Tipo de problema: ${tipo_problema}</li>
                       <li>Descrição: ${desc_problema}</li>
                       <li>Endereço: ${loc}</li>
-                    </ul>` 
+                    </ul>
+                    <img src='${url}'></img>` 
                 })
     
                 .then(() => console.log("E-mail hidraulico enviado com sucesso."))
@@ -94,7 +96,8 @@ router.post('/', async (request, response) => {
                       <li>Tipo de problema: ${tipo_problema}</li>
                       <li>Descrição: ${desc_problema}</li>
                       <li>Endereço: ${loc}</li>
-                    </ul>` 
+                    </ul>
+                    <img src='${url}'></img>` 
                 })
     
                 .then(() => console.log("E-mail infra enviado com sucesso."))
