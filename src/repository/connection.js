@@ -7,7 +7,7 @@ async function connect() {
             user : 'root',
             host : 'localhost',
             port : 3306,
-            password : '',
+            password : 'root',
             database : 'constsolucion'
           }
     )
