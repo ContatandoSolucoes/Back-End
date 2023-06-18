@@ -1,9 +1,9 @@
 import db from '../repository/connection.js';
 
 async function setDenuncia(url,tipo_problema,desc_problema,longitude,latitude) { 
-    const sql = 'INSERT INTO tbl_denuncia (imagem,tipo_problema,desc_problema,longitude,latitude) VALUES(?,?,?,?,?)'; 
+    const sql = 'INSERT INTO tbl_denuncia (imagem,tipo_problema,desc_problema,longitude,latitude, statu) VALUES(?,?,?,?,?,?)'; 
     
-    const dados = [url,tipo_problema,desc_problema,longitude,latitude];
+    const dados = [url,tipo_problema,desc_problema,longitude,latitude, 'ABERTO'];
 
     const conn = await db.connect();
     

@@ -11,6 +11,18 @@ async function resolutor(id){
   return rows
 }
 
+async function insertImgStatus(id, url){
+  const sql = "UPDATE tbl_denuncia SET imagem = ?, statu = 'RESOLVIDO' WHERE id_denuncia = ?"
+
+
+  const dados = [url, id]
+
+  const conn = await database.connect()
+
+  conn.query(sql, dados)
+  conn.end()
+}
+
 async function denuncia(){
   const sql = 'SELECT * FROM tbl_denuncia'
 
@@ -22,4 +34,4 @@ async function denuncia(){
   return rows
 }
 
-export default {resolutor, denuncia};
+export default {resolutor, denuncia, insertImgStatus};

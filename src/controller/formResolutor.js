@@ -3,24 +3,20 @@ import db from "../services/resolutorService.js"
 
 const router = express.Router()
 
-router.post('/', async (resquest, response) => {
-    const {id, imgURL} = resquest.body // chamo os negocio la do front
-    console.log("testetsetstet", id, imgURL)
+router.put('/', async (resquest, response) => {
+    const {id, imgURL} = resquest.body
     
     try{
-    
 
-        console.log('url firebase >>> ',imgURL) // exibo a url
-
-        const resposta = await db.resolutor(id)
+        const resposta = await db.resolutor(id) // verifica se o id é real
 
         if(id === '' ){
             return(response.status(422).send('Campo em branco'))
         }
-        if(resposta.length > 0){
-            const results = resposta[0]
-            
-            response.status(200).json({mensagem: "ID valido", denuncia: `${results}`})
+        if(resposta.length > 0){    
+            const insert = await db.insertImgStatus(id, imgURL)
+
+            response.status(200).send('forms inserido')
     }
     else{
       response.status(404).send('ID invalido')
