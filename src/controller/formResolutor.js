@@ -4,9 +4,13 @@ import db from "../services/resolutorService.js"
 const router = express.Router()
 
 router.post('/', async (resquest, response) => {
-    const {id} = resquest.body
+    const {id, imgURL} = resquest.body // chamo os negocio la do front
+    console.log("testetsetstet", id, imgURL)
     
     try{
+    
+
+        console.log('url firebase >>> ',imgURL) // exibo a url
 
         const resposta = await db.resolutor(id)
 
