@@ -9,6 +9,7 @@ import denuncia from './controller/denunciaController.js'
 import imgView  from './controller/imgViewController.js'
 import getD  from './controller/getD.js'
 import formsResolutor from './controller/formResolutor.js'
+import imgPerfilController from './controller/imgPerfilController.js'
 
 const router = express()
 
@@ -29,5 +30,7 @@ router.use('/imgView', imgView ); // oq é? ñ funciona
 router.use('/getD', getD );
 
 router.use('/resolutor', formsResolutor)
+
+router.use('/imgPerfil', imgPerfilController)
 
 export default router

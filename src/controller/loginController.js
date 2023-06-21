@@ -21,7 +21,7 @@ router.post('/', async (resquest, response) => {
 
       console.log('results controller >>> ',results)
 
-      const token = jwt.sign({nome_usuario: results.nome_usuario, email: results.email, nascimento: results.nascimento, telefone: results.telefone}, secret)
+      const token = jwt.sign({nome_usuario: results.nome_usuario, email: results.email, nascimento: results.nascimento, imagemUsuario: results.imagem}, secret)
       
       
       console.log('token controller >>>>> ',token)
