@@ -14,9 +14,11 @@ async function duplicate(nome_usuario, email, senha) {
 
 
 async function createUser(nome_usuario, email, senha, nascimentoP) { 
-    const sql = 'INSERT INTO tbl_usuario (nome_usuario, email, senha, nascimento) VALUES(?, ?, ?, ?)'; 
+    const sql = 'INSERT INTO tbl_usuario (nome_usuario, email, senha, nascimento, imagem) VALUES(?, ?, ?, ?, ?)'; 
     
-    const dados = [nome_usuario, email, senha, nascimentoP];
+    const imgP = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'
+
+    const dados = [nome_usuario, email, senha, nascimentoP, imgP];
 
     const conn = await db.connect();
     

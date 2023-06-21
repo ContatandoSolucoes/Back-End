@@ -12,13 +12,15 @@ router.put('/', async (resquest, response) => {
       return(response.status(422).send('Campo email em branco'))
 
   } else {
-    const result = db.insertImgPerfil(email, nome, url)
+    const result = await db.insertImgPerfil(email, nome, url)
 
-    response.status(200).send('img inserido')
+    console.log('email >>  perf ', email)
+
+    const RTA = result[0]
+
+    console.log('dados usuario >>' , result)
+    response.status(200).send({RTA})
   }
-
-      
-    
 
 
   }catch(error){
