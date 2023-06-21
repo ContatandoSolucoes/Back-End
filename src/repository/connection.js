@@ -4,11 +4,11 @@ import mysql2 from 'mysql2/promise';
 async function connect() {
     const connection = await mysql2.createConnection(
         { 
-            user : 'root',
-            host : 'localhost',
+            database: 'sql9627614',
+            user: 'sql9627614',
             port : 3306,
-            password : '',
-            database : 'constsolucion'
+            host: 'sql9.freemysqlhosting.net',
+            password: 'BnpYUshZF6'
           }
     )
 
