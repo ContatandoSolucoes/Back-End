@@ -12,7 +12,7 @@ async function resolutor(id){
 }
 
 async function insertImgStatus(id, url){
-  const sql = "UPDATE tbl_denuncia SET imagem = ?, statu = 'RESOLVIDO' WHERE id_denuncia = ?"
+  const sql = "UPDATE tbl_denuncia SET imagem = ?, status = 'RESOLVIDO' WHERE id_denuncia = ?"
 
 
   const dados = [url, id]
